@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <!-- Breadcrumb Area Start -->
+    <div class="breadcrumb-area contact-breadcrumb bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/18.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb-content text-center mt-100">
+                        <h2 class="page-title">Contact Us</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Area End -->
+
+    <!-- Google Maps & Contact Info Area Start -->
+    <section class="google-maps-contact-info">
+        <div class="container-fluid">
+            <div class="google-maps-contact-content">
+                <div class="row">
+                    <!-- Single Contact Info -->
+                    <div class="col-6 col-lg-3">
+                        <div class="single-contact-info">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <h4>Phone</h4>
+                            <p>+996 (772) 40-70-20</p>
+                        </div>
+                    </div>
+                    <!-- Single Contact Info -->
+                    <div class="col-6 col-lg-3">
+                        <div class="single-contact-info">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <h4>Address</h4>
+                            <p>Pushkin St, 203, Bishkek</p>
+                        </div>
+                    </div>
+                    <!-- Single Contact Info -->
+                    <div class="col-6 col-lg-3">
+                        <div class="single-contact-info">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <h4>Open time</h4>
+                            <p>24/7</p>
+                        </div>
+                    </div>
+                    <!-- Single Contact Info -->
+                    <div class="col-6 col-lg-3">
+                        <div class="single-contact-info">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <h4>Email</h4>
+                            <p>vivahostelkg@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="google-maps">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1BjB-LzIVf1qC1_qNfQz-wAsUf1I&hl=en" width="640" height="480"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Google Maps & Contact Info Area End -->
+
+    <!-- Contact Form Area Start -->
+    <div class="roberto-contact-form-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Section Heading -->
+                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
+                        <h6>Contact Us</h6>
+                        <h2>Leave Message</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Form -->
+                    <div class="roberto-contact-form">
+                        <form action='' method="post">
+                            
+                                {% csrf_token %}
+                                {{ contact_form }}
+                                <div class="col-12 text-center wow fadeInUp" data-wow-delay="100ms">
+                                    <button type="submit" class="btn roberto-btn mt-15">Send Message</button>
+                                </div>
+                            </form>
+                            </div>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Form Area End -->
+
+    <!-- Call To Action Area Start -->
+    <section class="roberto-cta-area">
+        <div class="container">
+            <div class="cta-content bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/1.jpg);">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-7">
+                        <div class="cta-text mb-50">
+                            <h2>Contact us now!</h2>
+                            <h6>Contact (+12) 345-678-9999 to book directly or for advice</h6>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 text-right">
+                        <a href="#" class="btn roberto-btn mb-50">Contact Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call To Action Area End -->
+
+    {% endblock body %}
